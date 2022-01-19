@@ -19,14 +19,15 @@ module.exports = (sequelize, DataTypes) => {
   outlet.init({
     id_outlet: {
       type: DataTypes.INTEGER,
-      image:DataTypes.STRING,
+      image: DataTypes.STRING,
       primaryKey: true,
       autoIncrement: true
     },
     tempat: DataTypes.STRING
   }, {
-      sequelize,
-      modelName: 'outlet',
-      tableName: 'outlet'
-    });
+    sequelize,
+    modelName: 'outlet',
+    tableName: 'outlet'
+  });
+  return outlet;
 };
