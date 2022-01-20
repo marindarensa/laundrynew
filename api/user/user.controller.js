@@ -56,6 +56,7 @@ module.exports = {
     controllerAdd: (req, res) => {
         upload.single('image')(req, res, () => {
             const data = {
+                nama: req.body.nama,
                 username: req.body.username,
                 email: req.body.email,
                 password: md5(req.body.password),
@@ -78,6 +79,7 @@ module.exports = {
             const param = { id_user: req.body.id_user }
             const data = {
                 id: req.body.id,
+                nama: req.body.nama,
                 username: req.body.username,
                 email: req.body.email,
                 password: md5(req.body.password),
