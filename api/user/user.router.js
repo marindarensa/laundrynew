@@ -14,7 +14,7 @@ const {IsAdminKasir, IsAdmin, IsOwner} = require('../auth/role');
 // routes
 router.get('/', authorize, IsAdmin, controllerGetAll); //admin only
 router.get('/:id_user', authorize, IsAdmin, controllerGetId); //admin only
-router.post('/', IsAdmin, controllerAdd); // all authenticated users
+router.post('/', IsAdmin, authorize, controllerAdd); // all authenticated users
 router.put('/', authorize, IsAdmin, controllerEdit); //admin only
 router.delete('/', authorize, IsAdmin, controllerDelete); //admin only
 router.post('/auth', controllerAuth); //public route

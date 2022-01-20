@@ -54,7 +54,7 @@ module.exports = {
     },
     // controller ADD
     controllerAdd: (req, res) => {
-        upload.single('img')(req, res, () => {
+        upload.single('image')(req, res, () => {
             const data = {
                 jenis: req.body.jenis,
                 harga: req.body.harga,
@@ -72,7 +72,7 @@ module.exports = {
     },
     // controller EDIT
     controllerEdit: (req, res) => {
-        upload.single('img')(req, res, () => {
+        upload.single('image')(req, res, () => {
             const param = { id_paket: req.body.id_paket }
             const data = {
                 id: req.body.id,

@@ -54,7 +54,7 @@ module.exports = {
     },
     // controller ADD
     controllerAdd: (req, res) => {
-        upload.single('img')(req, res, () => {
+        upload.single('image')(req, res, () => {
             const data = {
                 tempat: req.body.tempat,
                 image: req.file.image
@@ -76,7 +76,7 @@ module.exports = {
     },
     // controller EDIT
     controllerEdit: (req, res) => {
-        upload.single('img')(req, res, () => {
+        upload.single('image')(req, res, () => {
             const param = { id_outlet: req.body.id_outlet }
             const data = {
                 tempat: req.body.tempat,

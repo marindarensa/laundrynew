@@ -54,7 +54,7 @@ module.exports = {
     },
     // controller ADD
     controllerAdd: (req, res) => {
-        upload.single('img')(req, res, () => {
+        upload.single('image')(req, res, () => {
             const data = {
                 username: req.body.username,
                 email: req.body.email,
@@ -74,7 +74,7 @@ module.exports = {
     },
     // controller EDIT
     controllerEdit: (req, res) => {
-        upload.single('img')(req, res, () => {
+        upload.single('image')(req, res, () => {
             const param = { id_user: req.body.id_user }
             const data = {
                 id: req.body.id,
